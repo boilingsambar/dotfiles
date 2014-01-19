@@ -53,6 +53,9 @@ set smarttab
 set cmdheight=2
 set pastetoggle=<F11>
 
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+
 "set laststatus=4
 "let b:did_indent = 1 <-- Add to ~/.vim/indent/html.vim
 "let loaded_matchparen = 1
