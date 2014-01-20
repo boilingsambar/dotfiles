@@ -78,5 +78,5 @@ set directory=~/.vim/swap//
 
 "set laststatus=4
 "set cmdheight=2
-"let b:did_indent = 1 <-- Add to ~/.vim/indent/html.vim
+"let b:did_indent = 1
 "let loaded_matchparen = 1
