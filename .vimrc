@@ -1,11 +1,20 @@
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/syntastic'
+Bundle 'altercation/vim-colors-solarized'
+
 set mouse=a
 set ruler
 set number
 set hidden
-
 set guioptions -=m
 set guioptions -=T
-set nocompatible
 set backspace=indent,eol,start
 set showcmd
 set wildmenu
@@ -16,14 +25,14 @@ set smartcase
 set nowrap
 set history=1000
 set undolevels=1000
-
 set nostartofline
 set confirm
 
-set guifont=Liberation\ Mono\ Bold\ 9
 syntax on
+set guifont=Liberation\ Mono\ Bold\ 9
 set background=light
 colorscheme solarized
+"let g:solarized_bold=0
 
 set colorcolumn=80
 "highlight ColorColumn ctermbg=magenta
@@ -50,12 +59,21 @@ set autoindent
 set copyindent
 set smarttab
 
-set cmdheight=2
 set pastetoggle=<F11>
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
+"let g:syntastic_<filetype>_checkers=['<checker-name>']
+"let g:syntastic_python_checkers=['pylint']
+
+"Some filetypes, like PHP, have style checkers as well as syntax checkers. 
+"These can be chained together like this:
+"let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+"This is telling syntastic to run the php checker first, and if no errors are
+"found, run phpcs, and then phpmd.
+
 "set laststatus=4
+"set cmdheight=2
 "let b:did_indent = 1 <-- Add to ~/.vim/indent/html.vim
 "let loaded_matchparen = 1
