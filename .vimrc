@@ -9,7 +9,10 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
 
-set mouse=a
+if has('mouse')
+  set mouse=a
+endif
+
 set ruler
 set number
 set hidden
