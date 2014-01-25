@@ -16,8 +16,8 @@ endif
 set ruler
 set number
 set hidden
-set guioptions -=m
-set guioptions -=T
+set guioptions-=m
+set guioptions-=T
 set backspace=indent,eol,start
 set showcmd
 set wildmenu
@@ -31,11 +31,16 @@ set undolevels=1000
 set nostartofline
 set confirm
 
+set guifont=Inconsolata\ Medium\ 11
+"set guifont=Liberation\ Mono\ Bold\ 9
+"let g:solarized_bold=0
 syntax on
-set guifont=Liberation\ Mono\ Bold\ 9
 set background=light
 colorscheme solarized
-"let g:solarized_bold=0
+
+set encoding=utf-8
+"set list
+"set listchars=tab:▸\ ,eol:◂
 
 set colorcolumn=80
 "highlight ColorColumn ctermbg=magenta
@@ -44,6 +49,9 @@ set colorcolumn=80
 inoremap jj <Esc>
 inoremap fj <Esc>
 inoremap jf <Esc>
+
+nnoremap j gj
+nnoremap k gk
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
