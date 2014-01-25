@@ -9,6 +9,8 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
 
+filetype plugin indent on
+
 if has('mouse')
   set mouse=a
 endif
@@ -55,7 +57,6 @@ nnoremap k gk
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
-filetype plugin indent on
 autocmd BufRead,BufNewFile *.html filetype indent off
 
 setlocal tabstop=4
