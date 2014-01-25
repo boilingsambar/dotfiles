@@ -31,8 +31,8 @@ set undolevels=1000
 set nostartofline
 set confirm
 
-set guifont=Inconsolata\ Medium\ 11
-"set guifont=Liberation\ Mono\ Bold\ 9
+set guifont=Liberation\ Mono\ Bold\ 9
+"set guifont=Inconsolata\ Medium\ 11
 "let g:solarized_bold=0
 syntax on
 set background=light
