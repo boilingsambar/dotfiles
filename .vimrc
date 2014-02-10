@@ -32,11 +32,11 @@ set history=1000
 set undolevels=1000
 set nostartofline
 set confirm
+set shell=bash
 
-set guifont=Liberation\ Mono\ 9
-"set guifont=Droid\ Sans\ Mono\ 9
+set guifont=Inconsolata\ Medium\ 11
+"set guifont=Liberation\ Mono\ 9
 "set guifont=Liberation\ Mono\ Bold\ 9
-"set guifont=Inconsolata\ Medium\ 11
 "let g:solarized_bold=0
 syntax on
 set background=light
@@ -58,6 +58,11 @@ nnoremap j gj
 nnoremap k gk
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \ exe "normal g`\"" |
+    \ endif
 
 autocmd BufRead,BufNewFile *.html filetype indent off
 
