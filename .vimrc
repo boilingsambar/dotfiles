@@ -21,6 +21,7 @@ set hidden
 set guioptions-=m
 set guioptions-=T
 set backspace=indent,eol,start
+set nojoinspaces
 set showcmd
 set wildmenu
 set hlsearch
