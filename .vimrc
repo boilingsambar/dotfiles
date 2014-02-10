@@ -33,6 +33,7 @@ set undolevels=1000
 set nostartofline
 set confirm
 set shell=bash
+let mapleader=","
 
 set guifont=Inconsolata\ Medium\ 11
 "set guifont=Liberation\ Mono\ 9
