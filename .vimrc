@@ -35,6 +35,7 @@ set undolevels=1000
 set nostartofline
 set confirm
 set shell=bash
+"set autochdir
 let mapleader=","
 
 set guifont=Inconsolata\ Medium\ 11
