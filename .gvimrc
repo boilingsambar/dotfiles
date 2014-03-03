@@ -8,6 +8,8 @@ Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'wincent/Command-T'
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-misc'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
@@ -35,7 +37,6 @@ set undolevels=1000
 set nostartofline
 set confirm
 set shell=bash
-"set autochdir
 let mapleader=","
 
 set guifont=Inconsolata\ Medium\ 11
@@ -74,6 +75,7 @@ setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal softtabstop=4
 setlocal expandtab
+autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
@@ -86,6 +88,10 @@ set pastetoggle=<F11>
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
+
+set autochdir
+"cd /
+"set wildignore+=
 
 "let g:syntastic_<filetype>_checkers=['<checker-name>']
 "let g:syntastic_python_checkers=['pylint']
