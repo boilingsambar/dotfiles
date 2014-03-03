@@ -34,7 +34,7 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/bin/konsole
 
 # kill focused window
-bindsym $mod+slash kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+semicolon exec dmenu_run
