@@ -13,6 +13,9 @@
 
 set $mod Mod1
 
+# switch between the current and the previously focused one
+bindsym $mod+n workspace back_and_forth
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -27,13 +30,14 @@ font pango:Droid Sans 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec /usr/bin/konsole
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+slash kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+semicolon exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -73,12 +77,16 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+y layout stacking
+bindsym $mod+u layout tabbed
+bindsym $mod+i layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+#bindsym $mod+Shift+space floating toggle
+bindsym $mod+p floating toggle
+
+# Toggle between stacking/tabbed/splith/splitv:
+bindsym $mod+o layout toggle all
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
