@@ -75,9 +75,11 @@ setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal softtabstop=4
 setlocal expandtab
+
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 set shiftround
 set autoindent

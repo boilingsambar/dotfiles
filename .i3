@@ -13,8 +13,6 @@
 
 set $mod Mod1
 
-# switch between the current and the previously focused one
-bindsym $mod+n workspace back_and_forth
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -77,13 +75,13 @@ bindsym $mod+equal split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+y layout stacking
+#bindsym $mod+y layout stacking
 bindsym $mod+u layout tabbed
 bindsym $mod+i layout toggle split
 
 # toggle tiling / floating
 #bindsym $mod+Shift+space floating toggle
-bindsym $mod+p floating toggle
+bindsym $mod+y floating toggle
 
 # Toggle between stacking/tabbed/splith/splitv:
 bindsym $mod+o layout toggle all
@@ -108,6 +106,13 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+
+# switch to the next and previous workspace
+bindsym $mod+n workspace next
+bindsym $mod+p workspace previous
+
+# switch between the current and the previously focused one
+#bindsym $mod+n workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
