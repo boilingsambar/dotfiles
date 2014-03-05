@@ -112,7 +112,7 @@ bindsym $mod+n workspace next
 bindsym $mod+p workspace previous
 
 # switch between the current and the previously focused one
-#bindsym $mod+n workspace back_and_forth
+bindsym $mod+m workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
