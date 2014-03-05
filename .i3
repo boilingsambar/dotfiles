@@ -109,7 +109,7 @@ bindsym $mod+0 workspace 10
 
 # switch to the next and previous workspace
 bindsym $mod+n workspace next
-bindsym $mod+p workspace previous
+bindsym $mod+p workspace prev
 
 # switch between the current and the previously focused one
 bindsym $mod+m workspace back_and_forth
