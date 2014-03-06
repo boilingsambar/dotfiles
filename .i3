@@ -54,10 +54,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+comma move left
+#bindsym $mod+Shift+j move down
+#bindsym $mod+Shift+k move up
+bindsym $mod+period move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -108,8 +108,8 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # switch to the next and previous workspace
-bindsym $mod+n workspace next
-bindsym $mod+p workspace prev
+bindsym $mod+Shift+l workspace next
+bindsym $mod+Shift+h workspace prev
 
 # switch between the current and the previously focused one
 bindsym $mod+m workspace back_and_forth
