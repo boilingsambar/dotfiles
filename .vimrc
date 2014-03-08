@@ -7,9 +7,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
-Bundle 'wincent/Command-T'
-Bundle 'xolox/vim-session'
-Bundle 'xolox/vim-misc'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
