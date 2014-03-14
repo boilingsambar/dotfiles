@@ -34,6 +34,7 @@ set undolevels=1000
 set nostartofline
 set confirm
 set shell=bash
+set autochdir
 let mapleader=","
 
 set guifont=Inconsolata\ Medium\ 11
@@ -66,17 +67,16 @@ autocmd BufReadPost *
     \ exe "normal g`\"" |
     \ endif
 
-autocmd BufRead,BufNewFile *.html filetype indent off
-
 setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal softtabstop=4
 setlocal expandtab
 
-autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2 filetype indent off
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 filetype indent off
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
+"autocmd BufRead,BufNewFile *.html filetype indent off
 
 set shiftround
 set autoindent
@@ -84,11 +84,17 @@ set copyindent
 set smarttab
 
 set pastetoggle=<F11>
-
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
-set autochdir
+"pressing ,(leader)+v opens .vimrc 
+"nmap <leader>v :e $MYVIMRC<CR>
+
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
 "cd /
 "set wildignore+=
 

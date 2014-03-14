@@ -13,7 +13,6 @@
 
 set $mod Mod1
 
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -55,10 +54,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+comma move left
-#bindsym $mod+Shift+j move down
-#bindsym $mod+Shift+k move up
-bindsym $mod+period move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -94,7 +93,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -109,11 +108,16 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # switch to the next and previous workspace
-bindsym $mod+Shift+l workspace next
-bindsym $mod+Shift+h workspace prev
+bindsym $mod+n workspace next
+bindsym $mod+p workspace prev
+
+bindsym $mod+Shift+n move container to workspace next
+bindsym $mod+Shift+p move container to workspace prev
 
 # switch between the current and the previously focused one
 bindsym $mod+m workspace back_and_forth
+
+bindsym $mod+Shift+m move container to workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
