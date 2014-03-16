@@ -7,6 +7,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
@@ -72,8 +73,8 @@ setlocal shiftwidth=4
 setlocal softtabstop=4
 setlocal expandtab
 
-autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2 filetype indent off
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 filetype indent off
+autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
 "autocmd BufRead,BufNewFile *.html filetype indent off
