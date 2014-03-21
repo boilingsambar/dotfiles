@@ -68,36 +68,36 @@ autocmd BufReadPost *
     \ exe "normal g`\"" |
     \ endif
 
-setlocal tabstop=4
-setlocal shiftwidth=4
-setlocal softtabstop=4
-setlocal expandtab
-
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
-"autocmd BufRead,BufNewFile *.html filetype indent off
+" autocmd BufRead,BufNewFile *.html filetype indent off
 
 set shiftround
 set autoindent
 set copyindent
 set smarttab
+set expandtab
+setlocal tabstop=4
+setlocal shiftwidth=4
+setlocal softtabstop=4
 
 set pastetoggle=<F11>
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
-"pressing ,(leader)+v opens .vimrc 
-"nmap <leader>v :e $MYVIMRC<CR>
+" Toggle spell checking on and off with `,s`
+let mapleader = ","
+nmap <silent> <leader>s :set spell!<CR>
 
 " Source the vimrc file after saving it
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-"cd /
-"set wildignore+=
+"pressing ,(leader)+v opens .vimrc 
+"nmap <leader>v :e $MYVIMRC<CR>
 
 "let g:syntastic_<filetype>_checkers=['<checker-name>']
 "let g:syntastic_python_checkers=['pylint']
@@ -108,6 +108,14 @@ endif
 "This is telling syntastic to run the php checker first, and if no errors are
 "found, run phpcs, and then phpmd.
 
+let g:syntastic_javascript_checkers=['jshint', 'jslint']
+
+
+
+
+
+"cd /
+"set wildignore+=
 "set laststatus=4
 "set cmdheight=2
 "let b:did_indent = 1
