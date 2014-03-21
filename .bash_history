@@ -1,3 +1,6 @@
+sudo pacman -Syu
+sudo pacman -Rs
+
 xmodmap .xmodmap
 
 convert screenshot.jpg -resize 1280x720 screenshot-small.jpg
@@ -29,3 +32,7 @@ sudo systemctl restart service
 sudo mount -o loop /path/to/.iso /dir/to/mnt
 
 npm install -g csslint
+echo $HISTFILE
+export HISTFILE=/home/gits/.dotfiles/bashistory 
+echo $HISTFILE
+exit
