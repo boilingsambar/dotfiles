@@ -1,3 +1,4 @@
+sudo pacman -S archlinux-keyrin
 sudo pacman -Syu
 sudo pacman -Rs
 
@@ -32,7 +33,3 @@ sudo systemctl restart service
 sudo mount -o loop /path/to/.iso /dir/to/mnt
 
 npm install -g csslint
-echo $HISTFILE
-export HISTFILE=/home/gits/.dotfiles/bashistory 
-echo $HISTFILE
-exit

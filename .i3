@@ -29,9 +29,9 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec /usr/bin/konsole
+bindsym Print exec /usr/bin/ksnapshot
 
 # kill focused window
-bindsym $mod+slash kill
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
@@ -75,7 +75,7 @@ bindsym $mod+equal split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+y layout stacking
+#bindsym $mod+y layout stacking # No use for stacking layout
 bindsym $mod+u layout tabbed
 bindsym $mod+i layout toggle split
 

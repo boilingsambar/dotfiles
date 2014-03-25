@@ -10,8 +10,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'altercation/vim-colors-solarized'
 
-filetype plugin indent on
-
 if has('mouse')
   set mouse=a
 endif
@@ -70,9 +68,9 @@ autocmd BufReadPost *
 
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd BufRead,BufNewFile *.html filetype indent on
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
-" autocmd BufRead,BufNewFile *.html filetype indent off
 
 set shiftround
 set autoindent
@@ -110,6 +108,7 @@ endif
 
 let g:syntastic_javascript_checkers=['jshint', 'jslint']
 
+filetype plugin indent on
 
 
 
