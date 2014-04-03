@@ -28,14 +28,14 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec /usr/bin/konsole
+#bindsym $mod+Return exec /usr/bin/konsole
 bindsym Print exec /usr/bin/ksnapshot
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+Shift+Return exec dmenu_run
+bindsym $mod+Return exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
