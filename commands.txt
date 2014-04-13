@@ -33,3 +33,5 @@ sudo systemctl restart service
 sudo mount -o loop /path/to/.iso /dir/to/mnt
 
 npm install -g csslint
+
+let makeprg = self.makeprgBuild({ 'args': '--browser --plusplus --sloppy --vars --predef=$'})
