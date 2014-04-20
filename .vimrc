@@ -7,6 +7,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-vinegar'
 Bundle 'kien/ctrlp.vim'
 Bundle 'altercation/vim-colors-solarized'
 
@@ -34,7 +35,6 @@ set nostartofline
 set confirm
 set shell=bash
 set autochdir
-let mapleader=","
 
 set guifont=Inconsolata\ Medium\ 11
 "set guifont=Liberation\ Mono\ 9
@@ -51,6 +51,9 @@ set encoding=utf-8
 set colorcolumn=80
 "highlight ColorColumn ctermbg=magenta
 "call matchadd('ColorColumn', '\%79v', 100)
+
+map <Space> <Leader>
+"let mapleader="," 
 
 inoremap jj <Esc>
 inoremap fj <Esc>
@@ -86,7 +89,6 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
 " Toggle spell checking on and off with `,s`
-let mapleader = ","
 nmap <silent> <leader>s :set spell!<CR>
 
 " Source the vimrc file after saving it
