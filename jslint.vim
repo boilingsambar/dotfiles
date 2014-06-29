@@ -30,7 +30,7 @@ function! SyntaxCheckers_javascript_jslint_GetHighlightRegex(item)
 endfunction
 
 function! SyntaxCheckers_javascript_jslint_GetLocList() dict
-    let makeprg = self.makeprgBuild({ 'args': '--browser --passfail --plusplus --sloppy --vars --predef=$'})
+    let makeprg = self.makeprgBuild({ 'args': '--browser --plusplus --sloppy --predef=$'})
     "let makeprg = self.makeprgBuild({ 'args': '--white --nomen --regexp --plusplus --bitwise --newcap --sloppy --vars' })
 
     let errorformat =
