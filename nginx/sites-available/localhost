@@ -1,0 +1,18 @@
+server {
+    listen 80;
+    server_name localhost;
+    root /home/gits/git/abyjames.com;
+
+    index index.html;
+    try_files $uri.html $uri/ $uri/ =404;
+    error_page 404 /404.html;
+
+    location /404.html {
+     	internal;
+    }
+}
+
+server {
+    server_name www.localhost;
+    return 301 $scheme://localhost$request_uri;
+}
