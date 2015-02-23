@@ -1,4 +1,4 @@
-sudo pacman -S archlinux-keyrin
+sudo pacman -S archlinux-keyring
 sudo pacman -Syu
 sudo pacman -Rs
 
@@ -29,6 +29,10 @@ sudo /opt/lampp/lampp stop
 sudo systemctl start nginx 
 sudo systemctl stop nginx
 sudo systemctl restart nginx
+
+sudo service start nginx
+sudo service stop nginx
+sudo service restart nginx
 
 sudo mount -o loop /path/to/.iso /dir/to/mnt
 
