@@ -1,15 +1,12 @@
+" ln -s ~/.dotfiles/.vim/.vimrc ~/.vimrc
+
 set nocompatible
+execute pathogen#infect()
 
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-vinegar'
-Bundle 'kien/ctrlp.vim'
-Bundle 'altercation/vim-colors-solarized'
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'scrooloose/syntastic'
+"Bundle 'tpope/vim-vinegar'
+"Bundle 'altercation/vim-colors-solarized'
 
 if has('mouse')
   set mouse=a
@@ -85,8 +82,10 @@ setlocal shiftwidth=4
 setlocal softtabstop=4
 
 set pastetoggle=<F11>
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
+set nobackup
+set noswapfile
+"set backupdir=~/.vim/backup//
+"set directory=~/.vim/swap//
 
 " Toggle spell checking on and off with `,s`
 nmap <silent> <leader>s :set spell!<CR>

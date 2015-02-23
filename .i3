@@ -26,28 +26,35 @@ font pango:Droid Sans 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+# Start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec /usr/bin/konsole
-bindsym Print exec /usr/bin/ksnapshot
+bindsym Print exec ksnapshot
 
-# kill focused window
-bindsym $mod+q kill
+# i3lock
+bindsym $mod+Tab exec i3lock
 
-# start dmenu (a program launcher)
+# Kill focused window
+bindsym $mod+slash kill
+
+# Start dmenu
 bindsym $mod+Return exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# change focus
+# Brightness Up and Down
+bindsym XF86MonBrightnessUp exec xbacklight -inc 25
+bindsym XF86MonBrightnessDown exec xbacklight -dec 25
+
+# Change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
+# Alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
