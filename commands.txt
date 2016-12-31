@@ -26,16 +26,29 @@ git pull origin master
 sudo /opt/lampp/lampp start
 sudo /opt/lampp/lampp stop
 
+sudo vim /etc/nginx/sites-enabled/localhost
+
 sudo systemctl start nginx 
 sudo systemctl stop nginx
 sudo systemctl restart nginx
 
-sudo service start nginx
-sudo service stop nginx
-sudo service restart nginx
+sudo service nginx start
+sudo service nginx stop
+sudo service nginx restart
+
+nmcli dev wifi list
+
+nmcli nm status
+nmcli nm wifi on
+
+nmcli dev wifi con <network name> password <password> 
 
 sudo mount -o loop /path/to/.iso /dir/to/mnt
 
 npm install -g csslint
 
 let makeprg = self.makeprgBuild({ 'args': '--browser --plusplus --sloppy --vars --predef=$'})
+
+virtualenv <env name>
+source <path to env>/bin/activate
+deactivate

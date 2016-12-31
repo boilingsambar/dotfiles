@@ -4,9 +4,7 @@ set nocompatible
 execute pathogen#infect()
 
 "Bundle 'Valloric/YouCompleteMe'
-"Bundle 'scrooloose/syntastic'
 "Bundle 'tpope/vim-vinegar'
-"Bundle 'altercation/vim-colors-solarized'
 
 if has('mouse')
   set mouse=a
@@ -32,6 +30,7 @@ set nostartofline
 set confirm
 set shell=bash
 set autochdir
+set clipboard=unnamed,unnamedplus
 
 set guifont=Inconsolata\ Medium\ 11
 "set guifont=Liberation\ Mono\ 9
@@ -66,11 +65,13 @@ autocmd BufReadPost *
     \ exe "normal g`\"" |
     \ endif
 
-autocmd BufRead,BufNewFile *.html filetype indent on
-autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd BufRead,BufNewFile *.html setlocal nocin
+autocmd BufRead,BufNewFile *.txt setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType css setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 set shiftround
 set autoindent
@@ -107,7 +108,9 @@ endif
 "This is telling syntastic to run the php checker first, and if no errors are
 "found, run phpcs, and then phpmd.
 
-let g:syntastic_javascript_checkers=['jshint', 'jslint']
+let g:syntastic_html_checkers=['tidy', 'jshint']
+let g:syntastic_css_checkers=['csslint']
+let g:syntastic_javascript_checkers=['eslint']
 
 filetype plugin indent on
 
