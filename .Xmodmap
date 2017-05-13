@@ -15,4 +15,4 @@ remove Lock = backslash bar backslash bar brokenbar
 keysym backslash bar backslash bar notsign brokenbar = Shift_L ISO_Next_Group Shift_L ISO_Next_Group
 add Lock = backslash bar backslash bar notsign brokenbar
 
-!GUI application to find keyboard layout, keycodes, keysym etc: xkeycaps. More information: https://wiki.archlinux.org/index.php/xmodmap.
+!GUI application to find keyboard layout, keycode, keysym etc: xkeycaps. More information: https://wiki.archlinux.org/index.php/xmodmap.
