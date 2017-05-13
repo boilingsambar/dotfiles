@@ -1,4 +1,4 @@
-!xmodmap ~/.xmodmap
+!xmodmap ~/.Xmodmap
 !
 ! Swap Caps_Lock and Control_L
 !
