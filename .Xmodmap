@@ -8,3 +8,9 @@ keysym Control_L = Caps_Lock
 keysym Caps_Lock = Control_L
 add Lock = Caps_Lock
 add Control = Control_L
+
+!Make >< key behave as Shift on Thinkpad x230
+
+remove Lock = backslash bar backslash bar brokenbar
+keysym backslash bar backslash bar notsign brokenbar = Shift_L ISO_Next_Group Shift_L ISO_Next_Group
+add Lock = backslash bar backslash bar notsign brokenbar
